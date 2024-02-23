@@ -1,0 +1,16 @@
+﻿@model List<RazorViewMotoru.Models.Urun>
+<h2>Ürünler</h2>
+<hr />
+<strong> @ViewBag.UrunSayisi</strong>  adet ürün listelendi.
+<hr />
+@foreach (var urun in Model)
+{
+    <hr />
+    <div class="card" style="width: 18rem;">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">@urun.UrunAdi</li>
+            <li class="list-group-item">@urun.Aciklama</li>
+            <li class="list-group-item">@urun.Fiyat</li>
+        </ul>
+    </div>
+}
